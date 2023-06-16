@@ -1,0 +1,43 @@
+$offwhite: #fffdfa;
+$darkBlue: #00001a;
+$gunmetal: #5e607a;
+$red: #f15d51;
+$silver: #c5c6ce;
+$yellow: #e9aa52;
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: $offwhite;
+  font-size: 15px;
+  line-height: 26px;
+  font-family: Inter;
+  color: $gunmetal;
+}
+
+#wrapper {
+  margin: 0px auto;
+  max-width: 1110px;
+  padding: 0px 20px;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headnav{
+  background: red;
+  inset: 0;
+  position: absolute;
+}
