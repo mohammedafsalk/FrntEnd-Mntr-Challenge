@@ -92,7 +92,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.latest {
+#latest {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -170,5 +170,37 @@ img {
     font-size: 18px;
     margin-bottom: 8px;
     color: $darkBlue;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .headnav {
+    position: relative;
+    transform: none;
+  }
+  .menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0px 0px;
+  }
+  #latest {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  .latestitems {
+    .list {
+      grid-template-columns: 1fr 1fr;
+      padding: 20px 0px 20px 10px;
+    }
+  }
+  #featured{
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
   }
 }
