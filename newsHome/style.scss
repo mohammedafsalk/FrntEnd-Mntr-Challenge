@@ -34,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 0px;
 }
 
 .active {
@@ -42,7 +43,7 @@ body {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     inset: 0;
-    position: absolute;
+    position: fixed;
     z-index: 1;
   }
   .headnav {
@@ -53,7 +54,7 @@ body {
 .headnav {
   background: white;
   inset: 0 0 0 auto;
-  position: absolute;
+  position: fixed;
   width: 75%;
   transition: all 600ms;
   transform: translate(100%);
@@ -77,6 +78,97 @@ body {
   a:link,
   a:visited {
     text-decoration: none;
+    color: $darkBlue;
+  }
+}
+
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.latest {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.latestitems {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px 0px;
+    gap: 20px;
+    h2 {
+      font-size: 43px;
+      color: $darkBlue;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+  }
+}
+
+.readmore {
+  background: $red;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  &:hover {
+    background: $darkBlue;
+  }
+}
+
+.latestlist {
+  background: $darkBlue;
+  padding: 25px;
+  h2 {
+    color: $yellow;
+    font-size: 32px;
+    font-weight: 800;
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+  }
+  .widgetitem {
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid;
+    &:last-child {
+      border: none;
+    }
+    h3 {
+      color: $offwhite;
+    }
+    p {
+      color: $silver;
+    }
+  }
+}
+
+#featured {
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.featureditem {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 20px;
+  .count {
+    font-size: 32px;
+    font-weight: 700;
+    color: $silver;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
     color: $darkBlue;
   }
 }
